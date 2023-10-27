@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.html</title>
+    <link rel="icon" type="image/png" href="imagens/transferir.png">
+</head>
+
+<body id="conteudo">
+<div >
+<h3 class="menu">ACEITA ORAR COMIGO? </h3>
+<button class="btn" onclick="sim()">SIM</button>
+<button class="btn" onmouseover="nao(this)">NÃO</button>
+    </div>
+</body>
+
+<style class="logim">
+ #conteudo
+ {
+     background: #03c00d;
+     width: 100%;
+     height: 100%;
+     position: fixed;
+     top: 0;
+     left: 0;
+     padding: 10px;
+     text-align: center;
+ }
+ 
+ .btn{
+background: rgb(11, 86, 224); 
+color:rgb(255, 255, 255);
+border: nome;
+padding: 10px;
+width: 80px;
+border-radius: 5px
+ }
+
+ .menu{
+background: #07048b;
+color:white;
+padding: 50px;
+border-radius:300px;
+text-align: center;
+ }
+</style>
+
+<script>
+    function sim(){
+     alert("Você aceitou orar comigo 🙃")
+    }
+
+    function nao(t){
+     var btn = t;
+     btn.style.position = "absolute";
+     btn.style.bottom = geraPosicao(10, 90);
+     btn.style.left = geraPosicao(10, 90);
+     console.log("Opa, desviei...");
+    }
+
+    function geraPosicao(min, max){
+        return (Math.random() * (max - min) + min) + "%";
+    }
+
+
+</script>
+
+
+</html>
